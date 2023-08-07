@@ -1,0 +1,41 @@
+<div class="nav">
+  <h1>Users list</h1>
+  <button (click)="AddUser()">Add user</button>
+  <button (click)="Logout()">Log out</button>
+</div>
+<ul class="users-list">
+  <li>
+    <div>
+      #
+    </div>
+    <div>
+      First name
+    </div>
+    <div>
+      Last name
+    </div>
+    <div>
+      Email
+    </div>
+    <div>
+      Actions
+    </div>
+  </li>
+  <li *ngFor="let user of users">
+    <div>
+      {{ user.id }}
+    </div>
+    <div>
+      {{ user.first_name }}
+    </div>
+    <div>
+      {{ user.last_name }}
+    </div>
+    <div>
+      {{ user.email }}
+    </div>
+    <div>
+      <a [routerLink]="['/user', user.id]">View</a>
+    </div>
+  </li>
+</ul>

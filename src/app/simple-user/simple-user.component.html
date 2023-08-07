@@ -1,0 +1,10 @@
+<div class="user-card">
+  <h2>Info:</h2>
+    <img :src="{{user.avatar}}" alt="">
+  <h1>Full name: {{ user.first_name }} {{ user.last_name }}</h1>
+  <h2>Email: {{ user.email }}</h2>
+  <div class="footer">
+    <button (click)="editUser()">Edit</button>
+    <button (click)="deleteUser()">Delete</button>
+  </div>
+</div>

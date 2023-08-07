@@ -1,0 +1,23 @@
+<div class="register-card">
+    <h2>Sign up</h2>
+    <form (ngSubmit)="onSubmit()">
+      <label for="username">Username:</label>
+      <input type="username" id="username" name="username" [(ngModel)]="username" required />
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" [(ngModel)]="email" required />
+  
+      <label for="password">Password:</label>
+      <input
+        type="password"
+        id="password"
+        name="password"
+        [(ngModel)]="password"
+        required
+      />
+  
+      <button type="submit" >Register</button>
+  
+      <a [routerLink]="['/login']">Login</a>
+    </form>
+  </div>
+  
